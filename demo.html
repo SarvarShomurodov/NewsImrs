@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <style>
+        .swiper-slide {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .swiper-slide .bg-img1 {
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            position: relative;
+            border-radius: 10px;
+        }
+        .content-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 15px;
+            border-radius: 0 0 10px 10px;
+        }
+        .category-badge {
+            background: #ff5722;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<section class="bg0 p-t-70">
+    <div class="container">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="bg-img1" style="background-image: url('images/hero-carousel-3.jpg');">
+                        <a href="blog-detail-01.html" class="d-block w-100 h-100"></a>
+                        <div class="content-overlay">
+                            <a href="#" class="category-badge">Business</a>
+                            <h3 class="mt-2">
+                                <a href="blog-detail-01.html" class="text-white text-decoration-none">
+                                    Microsoft quisque at ipsum vel orci eleifend ultrices
+                                </a>
+                            </h3>
+                            <p class="mb-0">Jack Sims - Feb 16</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="bg-img1" style="background-image: url('images/qurulish7.webp');">
+                        <a href="blog-detail-02.html" class="d-block w-100 h-100"></a>
+                        <div class="content-overlay">
+                            <a href="#" class="category-badge">Technology</a>
+                            <h3 class="mt-2">
+                                <a href="blog-detail-02.html" class="text-white text-decoration-none">
+                                    AI is transforming industries worldwide
+                                </a>
+                            </h3>
+                            <p class="mb-0">Sarah Connor - Mar 10</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="bg-img1" style="background-image: url('images/post-03.jpg');">
+                        <a href="blog-detail-03.html" class="d-block w-100 h-100"></a>
+                        <div class="content-overlay">
+                            <a href="#" class="category-badge">Health</a>
+                            <h3 class="mt-2">
+                                <a href="blog-detail-03.html" class="text-white text-decoration-none">
+                                    Healthy eating tips for a better lifestyle
+                                </a>
+                            </h3>
+                            <p class="mb-0">John Doe - Jan 25</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+
+</body>
+</html>
